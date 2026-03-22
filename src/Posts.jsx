@@ -5,7 +5,7 @@ export function Posts() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     console.log("Компонент появился");
-    async function loadUsers() {
+    async function loadPosts() {
       try {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/posts",
@@ -17,7 +17,7 @@ export function Posts() {
         console.log(error);
       }
     }
-    loadUsers();
+    loadPosts();
   }, []);
 
   if (loading) {
