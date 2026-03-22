@@ -2,7 +2,7 @@ import { TodoInput } from "./TodoInput";
 import { TodoList } from "./TodoList";
 import { useState } from "react";
 import { Users } from "./Users";
-import { Posts } from "./posts";
+import { Posts } from "./Posts";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { RegisterForm } from "./RegisterForm";
 
