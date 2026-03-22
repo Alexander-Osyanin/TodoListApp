@@ -39,7 +39,7 @@ export function RegisterForm() {
       />
       {errors.email && <p>{errors.email}</p>}
       <input
-        type="text"
+        type="password"
         name="password"
         value={form.password}
         onChange={handleChange}
