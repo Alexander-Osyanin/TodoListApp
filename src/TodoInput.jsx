@@ -15,6 +15,11 @@ export function TodoInput({ onAdd }) {
       <input
         type="text"
         value={text}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            handleClick();
+          }
+        }}
         onChange={(event) => setText(event.target.value)}
       />
       <button onClick={handleClick}>Добавить</button>
