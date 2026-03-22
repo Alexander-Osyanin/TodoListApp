@@ -5,7 +5,6 @@ export function Users() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
-    console.log("Компонент появился");
     async function loadUsers() {
       try {
         const response = await fetch(
@@ -16,11 +15,10 @@ export function Users() {
         }
         const data = await response.json();
         setUsers(data);
-        setLoading(false);
       } catch (error) {
         setError(error.message);
+      } finally {
         setLoading(false);
-        console.log(error);
       }
     }
     loadUsers();

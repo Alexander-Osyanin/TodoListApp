@@ -5,7 +5,6 @@ export function Posts() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
-    console.log("Компонент появился");
     async function loadPosts() {
       try {
         const response = await fetch(
@@ -16,11 +15,10 @@ export function Posts() {
         }
         const data = await response.json();
         setPosts(data);
-        setLoading(false);
       } catch (error) {
         setError(error.message);
+      } finally {
         setLoading(false);
-        console.log(error);
       }
     }
     loadPosts();
